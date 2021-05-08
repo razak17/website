@@ -9,16 +9,16 @@ export const configs = {
       url: '/#about',
     },
     {
-      name: 'Experience',
-      url: '/#jobs',
-    },
-    {
       name: 'Work',
       url: '/#projects',
     },
     {
       name: 'Contact',
       url: '/#contact',
+    },
+    {
+      name: 'Resume',
+      url: '/#resume',
     },
   ],
 };

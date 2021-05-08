@@ -25,18 +25,18 @@ class Navbar extends React.Component {
             (item, index): JSX.Element => {
               return (
                 <li key={index}>
-                  <a className="nav-links" href={item.url}>
+                  <a
+                    className={
+                      item.name === 'Resume' ? 'nav-links-mobile' : 'nav-links'
+                    }
+                    href={item.url}
+                  >
                     {item.name}
                   </a>
                 </li>
               );
             }
           )}
-          <li>
-            <a className="nav-links-mobile" href="#resume">
-              Resume
-            </a>
-          </li>
         </ul>
         <Button
           className="resume-button"
