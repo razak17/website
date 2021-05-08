@@ -1,0 +1,46 @@
+:root {
+  --primary: #3acbf7;
+  --hover: #6568f4;
+  --white: #fff;
+  --btn-padding: 8px 20px;
+  --btn-transitIon: all 0.3s ease-out;
+}
+
+.btn {
+  padding: var(--btn-padding);
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  padding: var(--btn-padding);
+  transition: var(--btn-transitIon);
+  color: var(--hover);
+  transition: 250ms;
+}
+
+.btn--primary {
+  background-color: var(--primary);
+}
+
+.btn--outline {
+  padding: var(--btn-padding);
+  background-color: transparent;
+  color: var(--white);
+  border-radius: 4px;
+  border: 1px solid var(--primary);
+  transition: var(--btn-transitIon);
+}
+
+.btn--medium {
+  color: var(--white);
+  font-size: 1.2rem;
+}
+
+.btn--large {
+  padding: 12px 26px;
+  color: var(--white);
+  font-size: 20px;
+}
