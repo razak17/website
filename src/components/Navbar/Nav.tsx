@@ -13,8 +13,8 @@ class Navbar extends React.Component {
 
   render(): JSX.Element {
     return (
-      <nav className="navbar-items">
-        <h1 className="navbar-logo">React</h1>
+      <nav className="nav-items">
+        <h1 className="nav-logo">React</h1>
         <div className="menu-icon" onClick={this.handleMenuClicked}>
           <i
             className={this.state.menuClicked ? 'fas fa-times' : 'fas fa-bars'}
@@ -25,20 +25,24 @@ class Navbar extends React.Component {
             (item, index): JSX.Element => {
               return (
                 <li key={index}>
-                  <a
-                    className={
-                      item.name === 'Contact' ? 'nav-links-mobile' : 'nav-links'
-                    }
-                    href={item.url}
-                  >
+                  <a className="nav-links" href={item.url}>
                     {item.name}
                   </a>
                 </li>
               );
             }
           )}
+          <li>
+            <a className="nav-links-mobile" href="#resume">
+              Resume
+            </a>
+          </li>
         </ul>
-        <Button type="submit" onClick={() => console.log('Hello')}>
+        <Button
+          className="resume-button"
+          type="submit"
+          onClick={() => console.log('Hello')}
+        >
           Resume
         </Button>
       </nav>

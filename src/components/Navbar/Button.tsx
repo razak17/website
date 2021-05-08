@@ -9,6 +9,7 @@ interface Props {
   type: ButtonType;
   size?: ButtonSizes;
   style?: ButtonStyles;
+  className?: string;
   onClick: () => void;
 }
 
@@ -17,9 +18,13 @@ export const Button: React.FC<Props> = ({
   type,
   size = 'btn--medium',
   style = 'btn--primary',
+  className,
 }): JSX.Element => {
   return (
-    <button type={type} className={`btn ${size} ${style}`}>
+    <button
+      type={type}
+      className={`btn ${size} ${style} ${className ? className : ''}`}
+    >
       {children}
     </button>
   );
